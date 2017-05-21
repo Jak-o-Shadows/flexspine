@@ -1,16 +1,12 @@
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
+#include <libopencm3/stm32/timer.h>
+
+#include <stdint.h>
+
+#include "lowlevel/servo.h"
 
 
-uint8_t nextSend = 'a';
-uint8_t messageLen = 0;
-#define SENDBUFLEN 64
-uint8_t message[64];
-uint8_t messageIndex = 0;
-
-uint8_t rxIndex = 0;
-#define RECVBUFLEN 8
-uint8_t rxBuf[RECVBUFLEN];
 
 static void clock_setup(void);
 static void gpio_setup(void);
@@ -38,17 +34,27 @@ static void gpio_setup(void)
 }
 
 
+
 int main(void) {
 
 	
 	clock_setup();
 	gpio_setup();
+	
+	servo_init();
 
 	while (1) {
-		for (int i=0; i<90000; i++){
+		
+		servo_set_position(SERVO_CH1, SERVO_MAX);
+		for (int i=0; i<9000000; i++){
 			__asm__("nop");
 		}
 		gpio_toggle(GPIOC, GPIO13);
+		
+		servo_set_position(SERVO_CH1, SERVO_MIN);
+		for (int i=0; i<9000000; i++){
+			__asm__("nop");
+		}
 
 	}
 
