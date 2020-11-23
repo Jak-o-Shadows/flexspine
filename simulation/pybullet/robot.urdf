@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<robot name="quadrapod">
+	<!--- Colours ---->
+	<material name="red">
+		<color rgba="1 0 0 1"/>
+	</material>
+	<material name="black">
+		<color rgba="0.1 0.1 0.1 1"/>
+	</material>
+	<material name="blue">
+		<color rgba="0.1 0.1 0.8 1"/>
+	</material>
+	
+	<!--- Gut Parts --->
+	<link name="gut">
+		<visual>
+			<geometry>
+				<box size="0.015 0.2 0.015"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 -0.1 0"/>
+			<material name="red"/>
+		</visual>
+		<collision>
+			<geometry>
+				<box size="0.015 0.2 0.015"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 -0.1 0"/>
+			<!-- <contact_coefficients mu="0.08" /> -->
+		</collision>
+		<inertial>
+			<origin rpy="0 0 0" xyz="0 -0.15 0"/>
+			<mass value="0.05"/>
+			<inertia ixx="0.000219305233333" ixy="0.0" ixz="0.0" iyy="0.000270653233333" iyz="0.0" izz="6.50667333333e-05"/>
+		</inertial>
+	</link>
+	
+	<!--- Fore Parts --->
+  <link name="fore_plate">
+    <visual>
+      <geometry>
+        <box size="0.067 0.023 0.128"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0402 0.0138 0.0768"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <!-- <contact_coefficients mu="0.08" /> -->
+    </collision>
+    <inertial>
+      <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
+      <mass value="0.1556"/>
+      <inertia ixx="0.000219305233333" ixy="0.0" ixz="0.0" iyy="0.000270653233333" iyz="0.0" izz="6.50667333333e-05"/>
+    </inertial>
+  </link>
+  <link name="fore_starboard_hip">
+    <visual>
+      <geometry>
+        <box size="0.047 0.047 0.094"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.047"/>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0282 0.0282 0.0564"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.047"/>
+      <!-- <contact_coefficients mu="0.08" /> -->
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.047"/>
+      <mass value="0.1945"/>
+      <inertia ixx="0.000179021041667" ixy="0.0" ixz="0.0" iyy="0.000179021041667" iyz="0.0" izz="7.16084166667e-05"/>
+    </inertial>
+  </link>
+  <link name="fore_port_hip">
+    <visual>
+      <geometry>
+        <box size="0.047 0.047 0.094"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.047"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0282 0.0282 0.0564"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.047"/>
+      <!-- <contact_coefficients mu="0.08" /> -->
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.047"/>
+      <mass value="0.1945"/>
+      <inertia ixx="0.000179021041667" ixy="0.0" ixz="0.0" iyy="0.000179021041667" iyz="0.0" izz="7.16084166667e-05"/>
+    </inertial>
+  </link>
+  <link name="fore_starboard_femur">
+    <visual>
+      <geometry>
+        <box size="0.026 0.022 0.123"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 -0.0615"/>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0156 0.0132 0.0738"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 -0.0615"/>
+      <!-- <contact_coefficients mu="0.08" /> -->
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 -0.0615"/>
+      <mass value="0.05835"/>
+      <inertia ixx="7.59182125e-05" ixy="0.0" ixz="0.0" iyy="7.68518125e-05" iyz="0.0" izz="5.6405e-06"/>
+    </inertial>
+  </link>
+  <link name="fore_port_femur">
+    <visual>
+      <geometry>
+        <box size="0.026 0.022 0.123"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 -0.0615"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0156 0.0132 0.0738"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 -0.0615"/>
+      <!-- <contact_coefficients mu="0.08" /> -->
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 -0.0615"/>
+      <mass value="0.05835"/>
+      <inertia ixx="7.59182125e-05" ixy="0.0" ixz="0.0" iyy="7.68518125e-05" iyz="0.0" izz="5.6405e-06"/>
+    </inertial>
+  </link>
+  <link name="fore_starboard_tibia">
+    <visual>
+      <geometry>
+        <box size="0.016 0.019 0.136"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 -0.068"/>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0096 0.0114 0.0816"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 -0.068"/>
+      <!-- <contact_coefficients mu="0.08" /> -->
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 -0.068"/>
+      <mass value="0.05835"/>
+      <inertia ixx="9.16921625e-05" ixy="0.0" ixz="0.0" iyy="9.11816e-05" iyz="0.0" izz="3.0001625e-06"/>
+    </inertial>
+  </link>
+  <link name="fore_port_tibia">
+    <visual>
+      <geometry>
+        <box size="0.016 0.019 0.136"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 -0.068"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0096 0.0114 0.0816"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 -0.068"/>
+      <!-- <contact_coefficients mu="0.08" /> -->
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 -0.068"/>
+      <mass value="0.05835"/>
+      <inertia ixx="9.16921625e-05" ixy="0.0" ixz="0.0" iyy="9.11816e-05" iyz="0.0" izz="3.0001625e-06"/>
+    </inertial>
+  </link>
+  <link name="fore_starboard_foot">
+    <visual>
+      <geometry>
+        <sphere radius="0.0152"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.0152"/>
+      </geometry>
+      <!-- <contact_coefficients mu="0.08" /> -->
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <link name="fore_port_foot">
+    <visual>
+      <geometry>
+        <sphere radius="0.0152"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.0152"/>
+      </geometry>
+      <!-- <contact_coefficients mu="0.08" /> -->
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <!---  Forward Joints --->
+  <joint name="ForeStarboardServo" type="revolute">
+    <parent link="fore_plate"/>
+    <child link="fore_starboard_hip"/>
+    <axis xyz="0 1 0"/>
+    <origin rpy="0 0.0 0" xyz="0.0382 0.0385 -0.047"/>
+    <dynamics damping="0.01" friction="0.01"/>
+    <limit effort="100" lower="-0.305432619099" upper="0.343829862643" velocity="100"/>
+  </joint>
+  <joint name="ForeStarboardHip" type="revolute">
+    <parent link="fore_starboard_hip"/>
+    <child link="fore_starboard_femur"/>
+    <axis xyz="1 0 0"/>
+    <origin rpy="0.0 0 0" xyz="0.0365 0 0.0235"/>
+    <dynamics damping="0.01" friction="0.01"/>
+    <limit effort="100" lower="-2.09439510239" upper="2.09439510239" velocity="100"/>
+  </joint>
+  <joint name="ForeStarboardKnee" type="revolute">
+    <parent link="fore_starboard_femur"/>
+    <child link="fore_starboard_tibia"/>
+    <axis xyz="1 0 0"/>
+    <origin rpy="0.0 0 0" xyz="0 0 -0.123"/>
+    <dynamics damping="0.01" friction="0.01"/>
+    <limit effort="100" lower="-2.09439510239" upper="2.09439510239" velocity="100"/>
+  </joint>
+  <joint name="ForePortServo" type="revolute">
+    <parent link="fore_plate"/>
+    <child link="fore_port_hip"/>
+    <axis xyz="0 1 0"/>
+    <origin rpy="0 0.0 0" xyz="-0.0288 0.0385 -0.047"/>
+    <dynamics damping="0.01" friction="0.01"/>
+    <limit effort="100" lower="-0.305432619099" upper="0.343829862643" velocity="100"/>
+  </joint>
+  <joint name="ForePortHip" type="revolute">
+    <parent link="fore_port_hip"/>
+    <child link="fore_port_femur"/>
+    <axis xyz="1 0 0"/>
+    <origin rpy="0.0 0 0" xyz="-0.0365 0 0.0235"/>
+    <dynamics damping="0.01" friction="0.01"/>
+    <limit effort="100" lower="-2.09439510239" upper="2.09439510239" velocity="100"/>
+  </joint>
+  <joint name="ForePortKnee" type="revolute">
+    <parent link="fore_port_femur"/>
+    <child link="fore_port_tibia"/>
+    <axis xyz="1 0 0"/>
+    <origin rpy="0.0 0 0" xyz="0 0 -0.123"/>
+    <dynamics damping="0.01" friction="0.01"/>
+    <limit effort="100" lower="-2.09439510239" upper="2.09439510239" velocity="100"/>
+  </joint>
+  <joint name="ForePortFoot" type="fixed">
+    <parent link="fore_port_tibia"/>
+    <child link="fore_port_foot"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.136"/>
+  </joint>
+  <joint name="ForeStarboardFoot" type="fixed">
+    <parent link="fore_starboard_tibia"/>
+    <child link="fore_starboard_foot"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.136"/>
+  </joint>
+  <joint name="ForePlateGut" type="revolute">
+	<parent link="gut"/>
+	<child link="fore_plate"/>
+	<axis xyz="0 0 1"/>
+	<origin rpy="0 0 0 0" xyz = "0 0 0"/>
+	<dynamics damping="0.01" friction="0.01"/>
+	<limit effort = "100" lower="0.5235" upper="0.5235" velocity="100"/>
+  </joint>
+
+
+
+
+</robot>
