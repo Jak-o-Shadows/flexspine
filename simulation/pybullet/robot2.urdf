@@ -10,6 +10,12 @@
 	<material name="blue">
 		<color rgba="0.1 0.1 0.8 1"/>
 	</material>
+	<material name="port">
+		<color rgba="1 0 0 1"/>
+	</material>
+	<material name="starboard">
+		<color rgba="0 1 0 1"/>
+	</material>
 	
 	<!--- Gut Parts --->
 	
@@ -20,7 +26,7 @@
 				<box size="0.015 0.2 0.015"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 -0.1 0"/>
-			<material name="red"/>
+			<material name="blue"/>
 		</visual>
 		<collision>
 			<geometry>
@@ -43,7 +49,7 @@
         <box size="0.067 0.023 0.128"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="red"/>
+      <material name="blue"/>
     </visual>
     <collision>
       <geometry>
@@ -64,7 +70,7 @@
         <box size="0.047 0.047 0.094"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0.047"/>
-      <material name="red"/>
+      <material name="starboard"/>
     </visual>
     <collision>
       <geometry>
@@ -85,7 +91,7 @@
         <box size="0.047 0.047 0.094"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0.047"/>
-      <material name="blue"/>
+      <material name="port"/>
     </visual>
     <collision>
       <geometry>
@@ -106,7 +112,7 @@
         <box size="0.026 0.022 0.123"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 -0.0615"/>
-      <material name="red"/>
+      <material name="starboard"/>
     </visual>
     <collision>
       <geometry>
@@ -127,7 +133,7 @@
         <box size="0.026 0.022 0.123"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 -0.0615"/>
-      <material name="blue"/>
+      <material name="port"/>
     </visual>
     <collision>
       <geometry>
@@ -148,7 +154,7 @@
         <box size="0.016 0.019 0.136"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 -0.068"/>
-      <material name="red"/>
+      <material name="starboard"/>
     </visual>
     <collision>
       <geometry>
@@ -169,7 +175,7 @@
         <box size="0.016 0.019 0.136"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 -0.068"/>
-      <material name="blue"/>
+      <material name="port"/>
     </visual>
     <collision>
       <geometry>
@@ -296,7 +302,7 @@
         <box size="0.067 0.023 0.128"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="red"/>
+      <material name="blue"/>
     </visual>
     <collision>
       <geometry>
@@ -317,7 +323,7 @@
         <box size="0.047 0.047 0.094"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0.047"/>
-      <material name="red"/>
+      <material name="starboard"/>
     </visual>
     <collision>
       <geometry>
@@ -338,7 +344,7 @@
         <box size="0.047 0.047 0.094"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0.047"/>
-      <material name="blue"/>
+      <material name="port"/>
     </visual>
     <collision>
       <geometry>
@@ -359,7 +365,7 @@
         <box size="0.026 0.022 0.123"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 -0.0615"/>
-      <material name="red"/>
+      <material name="starboard"/>
     </visual>
     <collision>
       <geometry>
@@ -380,7 +386,7 @@
         <box size="0.026 0.022 0.123"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 -0.0615"/>
-      <material name="blue"/>
+      <material name="port"/>
     </visual>
     <collision>
       <geometry>
@@ -401,7 +407,7 @@
         <box size="0.016 0.019 0.136"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 -0.068"/>
-      <material name="red"/>
+      <material name="starboard"/>
     </visual>
     <collision>
       <geometry>
@@ -422,7 +428,7 @@
         <box size="0.016 0.019 0.136"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 -0.068"/>
-      <material name="blue"/>
+      <material name="port"/>
     </visual>
     <collision>
       <geometry>
